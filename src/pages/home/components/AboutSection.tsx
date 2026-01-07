@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useState } from 'react';
@@ -40,7 +39,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-20 px-6 relative" ref={ref}>
+    <section id="despre" className="py-20 px-6 relative" ref={ref}>
       <div className="max-w-7xl mx-auto">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10">
@@ -77,7 +76,7 @@ const AboutSection = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-[#00FFF5] to-[#FFD77B] rounded-full flex items-center justify-center mb-6 group-hover:shadow-lg group-hover:shadow-[#00FFF5]/30 transition-all duration-300">
+                <div className={`w-16 h-16 bg-gradient-to-r ${index % 2 === 0 ? 'from-[#00FFF5] to-[#FFD77B]' : 'from-[#FFD77B] to-[#00FFF5]'} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <i className={`${card.icon} text-2xl text-black`}></i>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
