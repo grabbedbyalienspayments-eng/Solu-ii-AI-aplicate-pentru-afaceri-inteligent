@@ -84,7 +84,3 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
-
-
-
-export default CaseStudiesSection;
