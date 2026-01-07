@@ -41,7 +41,7 @@ const Footer = () => {
         <h3 class="text-2xl font-bold text-white mb-4">4. Confidențialitate și NDA</h3>
         <p class="text-gray-300 mb-4">Toate proiectele sunt acoperite de acorduri de confidențialitate stricte. Datele și informațiile dumneavoastră nu vor fi divulgate terților fără consimțământul explicit.</p>
 
-        <h3 class="text-2xl font-bold text-white mb-4">5. Garanții și Limitări</h3>
+        <h3 class="text-2xl font-bold text-white mb-4">5. Garanți și Limitări</h3>
         <p class="text-gray-300 mb-4">Oferim garanție de 30 de zile pentru corectarea bug-urilor din codul livrat. Nu garantăm rezultate de business specifice, ci doar implementarea tehnică conform specificațiilor agreate.</p>
 
         <h3 class="text-2xl font-bold text-white mb-4">6. Plăți și Facturare</h3>
