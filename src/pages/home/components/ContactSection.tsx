@@ -65,13 +65,13 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-6 relative" ref={ref}>
+    <section id="contact" className="py-12 md:py-20 px-6 relative pb-0" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           <h2 className="text-5xl font-bold mb-8 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Să vorbim despre <span className="text-[#00FFF5]">proiectul</span> tău
@@ -85,7 +85,7 @@ const ContactSection = () => {
           className="relative"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           {/* Glassmorphism background */}
           <div className="absolute inset-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl" />
