@@ -43,7 +43,7 @@ export default function AnimatedBackground() {
 
     let animationFrameId: number;
     let lastTime = 0;
-    const fps = 30; // Limit to 30fps for smoother performance
+    const fps = 60; // Smooth 60fps
     const fpsInterval = 1000 / fps;
 
     const animate = (currentTime: number) => {
