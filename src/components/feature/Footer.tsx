@@ -246,54 +246,54 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-[#0B0F14] border-t border-white/10 py-8 md:py-10 px-4 md:px-6 mt-0">
+      <footer className="relative z-20 bg-[#0B0F14] border-t border-white/10 py-6 md:py-8 px-4 md:px-6 mt-0">
         <div className="max-w-7xl mx-auto">
           {/* Compact Footer Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
             {/* Logo și Social */}
             <div className="text-center md:text-left">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 NeuraLab
               </h3>
-              <p className="text-gray-400 text-xs md:text-sm mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <p className="text-gray-400 text-xs mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
                 AI care lucrează pentru tine
               </p>
-              <div className="flex gap-3 justify-center md:justify-start">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
-                  <i className="ri-linkedin-fill text-white text-base"></i>
+              <div className="flex gap-2 justify-center md:justify-start">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] hover:text-black transition-all duration-300">
+                  <i className="ri-linkedin-fill text-sm"></i>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
-                  <i className="ri-github-fill text-white text-base"></i>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] hover:text-black transition-all duration-300">
+                  <i className="ri-github-fill text-sm"></i>
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
-                  <i className="ri-twitter-x-line text-white text-base"></i>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] hover:text-black transition-all duration-300">
+                  <i className="ri-twitter-x-line text-sm"></i>
                 </a>
               </div>
             </div>
 
             {/* Quick Links */}
             <div className="text-center md:text-left">
-              <h4 className="text-white font-semibold mb-3 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h4 className="text-white font-semibold mb-2 text-sm" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Link-uri Rapide
               </h4>
-              <ul className="space-y-1.5">
+              <ul className="space-y-1">
                 <li>
-                  <button onClick={() => scrollToSection('servicii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <button onClick={() => scrollToSection('servicii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs" style={{ fontFamily: 'Inter, sans-serif' }}>
                     Servicii
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('studii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <button onClick={() => scrollToSection('studii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs" style={{ fontFamily: 'Inter, sans-serif' }}>
                     Studii de Caz
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => openModal('termeni')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <button onClick={() => openModal('termeni')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs" style={{ fontFamily: 'Inter, sans-serif' }}>
                     Termeni
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => openModal('confidentialitate')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <button onClick={() => openModal('confidentialitate')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs" style={{ fontFamily: 'Inter, sans-serif' }}>
                     Confidențialitate
                   </button>
                 </li>
@@ -302,23 +302,23 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div className="text-center md:text-left">
-              <h4 className="text-white font-semibold mb-3 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h4 className="text-white font-semibold mb-2 text-sm" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Contact
               </h4>
-              <ul className="space-y-1.5">
-                <li className="text-gray-400 text-xs md:text-sm flex items-center gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <ul className="space-y-1">
+                <li className="text-gray-400 text-xs flex items-center gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
                   <i className="ri-mail-line text-[#00FFF5]"></i>
                   <a href="mailto:contact@neuralab.ro" className="hover:text-[#00FFF5] transition-colors">
                     contact@neuralab.ro
                   </a>
                 </li>
-                <li className="text-gray-400 text-xs md:text-sm flex items-center gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
+                <li className="text-gray-400 text-xs flex items-center gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
                   <i className="ri-phone-line text-[#00FFF5]"></i>
                   <a href="tel:+40700000000" className="hover:text-[#00FFF5] transition-colors">
                     070 000 000
                   </a>
                 </li>
-                <li className="text-gray-400 text-xs md:text-sm flex items-start gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
+                <li className="text-gray-400 text-xs flex items-start gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
                   <i className="ri-map-pin-line text-[#00FFF5] mt-0.5"></i>
                   <span>București, România</span>
                 </li>
@@ -327,13 +327,13 @@ const Footer = () => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-white/10 pt-4">
+          <div className="border-t border-white/10 pt-3">
             <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-center">
-              <div className="text-xs md:text-sm text-gray-400" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <div className="text-xs text-gray-400 order-2 md:order-1" style={{ fontFamily: 'Inter, sans-serif' }}>
                 © {currentYear} NeuraLab. Toate drepturile rezervate.
               </div>
 
-              <div className="text-xs md:text-sm text-gray-400" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <div className="text-xs text-gray-400 order-1 md:order-2" style={{ fontFamily: 'Inter, sans-serif' }}>
                 Designed by{' '}
                 <a 
                   href="https://websiteon.ro" 
@@ -359,23 +359,23 @@ const Footer = () => {
             className="bg-[#1a1f2e] border-2 border-[#00FFF5]/30 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="sticky top-0 bg-[#1a1f2e] border-b border-white/10 p-6 flex justify-between items-center">
+            <div className="sticky top-0 bg-[#1a1f2e] border-b border-white/10 p-4 md:p-6 flex justify-between items-center">
               <h2 
-                className="text-2xl md:text-3xl font-bold text-[#00FFF5]"
+                className="text-xl md:text-2xl font-bold text-[#00FFF5]"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 {modalContent[activeModal as keyof typeof modalContent].title}
               </h2>
               <button
                 onClick={closeModal}
-                className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#00FFF5] transition-all duration-300"
+                className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-[#00FFF5] hover:text-black transition-all duration-300"
               >
-                <i className="ri-close-line text-2xl text-white"></i>
+                <i className="ri-close-line text-xl md:text-2xl"></i>
               </button>
             </div>
             
             <div 
-              className="p-6 text-gray-300 prose prose-invert max-w-none"
+              className="p-4 md:p-6 text-gray-300 prose prose-invert max-w-none text-sm"
               style={{ fontFamily: 'Inter, sans-serif' }}
               dangerouslySetInnerHTML={{ 
                 __html: modalContent[activeModal as keyof typeof modalContent].content 
