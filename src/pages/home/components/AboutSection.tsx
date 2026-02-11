@@ -14,9 +14,9 @@ const AboutSection = () => {
           reduction: prev.reduction < 80 ? prev.reduction + 2 : 80,
           transparency: prev.transparency < 100 ? prev.transparency + 3 : 100,
         }));
-      }, 100);
+      }, 50);
 
-      setTimeout(() => clearInterval(timer), 2000);
+      setTimeout(() => clearInterval(timer), 1500);
     }
   }, [inView]);
 
@@ -55,7 +55,7 @@ const AboutSection = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="text-5xl font-bold mb-8 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
               Despre <span className="text-[#00FFF5]">NeuraLab</span>
@@ -74,7 +74,7 @@ const AboutSection = () => {
                 className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-[#00FFF5]/50 transition-all duration-300 hover:transform hover:scale-105"
                 initial={{ opacity: 0, y: 50 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${index % 2 === 0 ? 'from-[#00FFF5] to-[#FFD77B]' : 'from-[#FFD77B] to-[#00FFF5]'} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <i className={`${card.icon} text-2xl text-black`}></i>
@@ -94,7 +94,7 @@ const AboutSection = () => {
             className="grid md:grid-cols-3 gap-8 text-center"
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
               <div className="text-4xl font-bold text-[#00FFF5] mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
