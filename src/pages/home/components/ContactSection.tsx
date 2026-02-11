@@ -24,14 +24,12 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validare email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setSubmitMessage('Te rog să introduci o adresă de email validă.');
       return;
     }
 
-    // Validare textarea - maxim 500 caractere
     if (formData.message.length > 500) {
       setSubmitMessage('Mesajul nu poate depăși 500 de caractere.');
       return;
@@ -65,40 +63,39 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-20 px-6 relative pb-0" ref={ref}>
+    <section id="contact" className="pt-20 pb-8 px-6 relative" ref={ref}>
       <div className="max-w-4xl mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-5xl font-bold mb-8 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>
             Să vorbim despre <span className="text-[#00FFF5]">proiectul</span> tău
           </h2>
-          <p className="text-xl text-gray-300" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <p className="text-lg md:text-xl text-gray-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             Completează formularul și îți vom răspunde în maximum 24 de ore
           </p>
         </motion.div>
 
         <motion.div
-          className="relative"
+          className="relative mb-0"
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {/* Glassmorphism background */}
           <div className="absolute inset-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl" />
           
           <form 
             onSubmit={handleSubmit}
-            className="relative z-10 p-8 md:p-12"
+            className="relative z-10 p-6 md:p-10"
             data-readdy-form
             id="contact-neuralab"
           >
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
               <div>
-                <label htmlFor="name" className="block text-white font-semibold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <label htmlFor="name" className="block text-white font-semibold mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Nume *
                 </label>
                 <input
@@ -108,13 +105,13 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 text-sm"
+                  className="w-full px-4 py-2.5 md:py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 text-sm"
                   placeholder="Numele tău complet"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-semibold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <label htmlFor="email" className="block text-white font-semibold mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
                   Email *
                 </label>
                 <input
@@ -124,14 +121,14 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 text-sm"
+                  className="w-full px-4 py-2.5 md:py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 text-sm"
                   placeholder="adresa@email.com"
                 />
               </div>
             </div>
 
-            <div className="mb-6">
-              <label htmlFor="projectType" className="block text-white font-semibold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <div className="mb-4 md:mb-6">
+              <label htmlFor="projectType" className="block text-white font-semibold mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Tip proiect
               </label>
               <div className="relative">
@@ -140,7 +137,7 @@ const ContactSection = () => {
                   name="projectType"
                   value={formData.projectType}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 text-sm pr-8 appearance-none"
+                  className="w-full px-4 py-2.5 md:py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 text-sm pr-8 appearance-none"
                 >
                   <option value="">Selectează tipul proiectului</option>
                   <option value="prototip">Prototip AI</option>
@@ -152,8 +149,8 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="mb-8">
-              <label htmlFor="message" className="block text-white font-semibold mb-2" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            <div className="mb-6">
+              <label htmlFor="message" className="block text-white font-semibold mb-2 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Mesaj *
               </label>
               <textarea
@@ -163,8 +160,8 @@ const ContactSection = () => {
                 onChange={handleInputChange}
                 required
                 maxLength={500}
-                rows={6}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 resize-none text-sm"
+                rows={5}
+                className="w-full px-4 py-2.5 md:py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-[#00FFF5] transition-colors duration-300 resize-none text-sm"
                 placeholder="Descrie-ne proiectul tău și cum te putem ajuta..."
               />
               <div className="text-right text-gray-400 text-xs mt-1">
@@ -176,7 +173,7 @@ const ContactSection = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting || formData.message.length > 500}
-                className="group relative overflow-hidden bg-gradient-to-r from-[#00FFF5] to-[#FFD77B] text-black font-bold px-8 py-4 rounded-full hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
+                className="group relative overflow-hidden bg-gradient-to-r from-[#00FFF5] to-[#FFD77B] text-black font-bold px-6 md:px-8 py-3 md:py-4 rounded-full hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -184,7 +181,6 @@ const ContactSection = () => {
                   {isSubmitting ? 'Se trimite...' : 'Trimite mesajul'}
                 </span>
                 
-                {/* Ripple effect */}
                 <motion.div
                   className="absolute inset-0 bg-white/20 rounded-full"
                   initial={{ scale: 0, opacity: 0 }}
@@ -195,7 +191,7 @@ const ContactSection = () => {
 
               {submitMessage && (
                 <motion.p
-                  className={`mt-4 text-center ${submitMessage.includes('Mulțumim') ? 'text-[#00FFF5]' : 'text-red-400'}`}
+                  className={`mt-3 text-center text-sm ${submitMessage.includes('Mulțumim') ? 'text-[#00FFF5]' : 'text-red-400'}`}
                   style={{ fontFamily: 'Inter, sans-serif' }}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
