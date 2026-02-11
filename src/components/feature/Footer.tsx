@@ -246,128 +246,100 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="bg-[#0B0F14] border-t border-white/10 py-12 px-6">
+      <footer className="bg-[#0B0F14] border-t border-white/10 py-8 md:py-10 px-4 md:px-6 mt-0">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            {/* Logo și descriere */}
-            <div className="col-span-1">
-              <h3 className="text-2xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          {/* Compact Footer Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6">
+            {/* Logo și Social */}
+            <div className="text-center md:text-left">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 NeuraLab
               </h3>
-              <p className="text-gray-400 text-sm mb-4" style={{ fontFamily: 'Inter, sans-serif' }}>
-                AI care lucrează pentru tine. Soluții inteligente pentru afaceri moderne.
+              <p className="text-gray-400 text-xs md:text-sm mb-3" style={{ fontFamily: 'Inter, sans-serif' }}>
+                AI care lucrează pentru tine
               </p>
-              <div className="flex gap-4">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
-                  <i className="ri-linkedin-fill text-white text-lg"></i>
+              <div className="flex gap-3 justify-center md:justify-start">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
+                  <i className="ri-linkedin-fill text-white text-base"></i>
                 </a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
-                  <i className="ri-github-fill text-white text-lg"></i>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
+                  <i className="ri-github-fill text-white text-base"></i>
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
-                  <i className="ri-twitter-x-line text-white text-lg"></i>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#00FFF5] transition-all duration-300">
+                  <i className="ri-twitter-x-line text-white text-base"></i>
                 </a>
               </div>
             </div>
 
-            {/* Navigare */}
-            <div>
-              <h4 className="text-white font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Navigare
+            {/* Quick Links */}
+            <div className="text-center md:text-left">
+              <h4 className="text-white font-semibold mb-3 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                Link-uri Rapide
               </h4>
-              <ul className="space-y-2">
+              <ul className="space-y-1.5">
                 <li>
-                  <button onClick={() => scrollToSection('despre')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Despre Noi
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => scrollToSection('servicii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <button onClick={() => scrollToSection('servicii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
                     Servicii
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('studii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <button onClick={() => scrollToSection('studii')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
                     Studii de Caz
                   </button>
                 </li>
                 <li>
-                  <button onClick={() => scrollToSection('contact')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Contact
+                  <button onClick={() => openModal('termeni')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    Termeni
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => openModal('confidentialitate')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-xs md:text-sm" style={{ fontFamily: 'Inter, sans-serif' }}>
+                    Confidențialitate
                   </button>
                 </li>
               </ul>
             </div>
 
-            {/* Legal */}
-            <div>
-              <h4 className="text-white font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                Legal
-              </h4>
-              <ul className="space-y-2">
-                <li>
-                  <button onClick={() => openModal('termeni')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Termeni și Condiții
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openModal('confidentialitate')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Politica de Confidențialitate
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openModal('gdpr')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    GDPR
-                  </button>
-                </li>
-                <li>
-                  <button onClick={() => openModal('cookies')} className="text-gray-400 hover:text-[#00FFF5] transition-colors duration-300 text-sm text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    Politica Cookies
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="text-white font-semibold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            {/* Contact Info */}
+            <div className="text-center md:text-left">
+              <h4 className="text-white font-semibold mb-3 text-sm md:text-base" style={{ fontFamily: 'Poppins, sans-serif' }}>
                 Contact
               </h4>
-              <ul className="space-y-2">
-                <li className="text-gray-400 text-sm flex items-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+              <ul className="space-y-1.5">
+                <li className="text-gray-400 text-xs md:text-sm flex items-center gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
                   <i className="ri-mail-line text-[#00FFF5]"></i>
                   <a href="mailto:contact@neuralab.ro" className="hover:text-[#00FFF5] transition-colors">
                     contact@neuralab.ro
                   </a>
                 </li>
-                <li className="text-gray-400 text-sm flex items-center gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                <li className="text-gray-400 text-xs md:text-sm flex items-center gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
                   <i className="ri-phone-line text-[#00FFF5]"></i>
                   <a href="tel:+40700000000" className="hover:text-[#00FFF5] transition-colors">
                     070 000 000
                   </a>
                 </li>
-                <li className="text-gray-400 text-sm flex items-start gap-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-                  <i className="ri-map-pin-line text-[#00FFF5] mt-1"></i>
+                <li className="text-gray-400 text-xs md:text-sm flex items-start gap-2 justify-center md:justify-start" style={{ fontFamily: 'Inter, sans-serif' }}>
+                  <i className="ri-map-pin-line text-[#00FFF5] mt-0.5"></i>
                   <span>București, România</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Separator */}
-          <div className="border-t border-white/10 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-sm text-gray-400 text-center md:text-left" style={{ fontFamily: 'Inter, sans-serif' }}>
+          {/* Bottom Bar */}
+          <div className="border-t border-white/10 pt-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-center">
+              <div className="text-xs md:text-sm text-gray-400" style={{ fontFamily: 'Inter, sans-serif' }}>
                 © {currentYear} NeuraLab. Toate drepturile rezervate.
               </div>
 
-              <div className="text-sm text-gray-400" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Made by{' '}
+              <div className="text-xs md:text-sm text-gray-400" style={{ fontFamily: 'Inter, sans-serif' }}>
+                Designed by{' '}
                 <a 
                   href="https://websiteon.ro" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-[#00FFF5] hover:text-[#FFD77B] transition-colors duration-300 font-semibold whitespace-nowrap"
+                  className="text-[#00FFF5] hover:text-[#FFD77B] transition-colors duration-300 font-semibold"
                 >
                   WebsiteON.ro
                 </a>
@@ -389,7 +361,7 @@ const Footer = () => {
           >
             <div className="sticky top-0 bg-[#1a1f2e] border-b border-white/10 p-6 flex justify-between items-center">
               <h2 
-                className="text-3xl font-bold text-[#00FFF5]"
+                className="text-2xl md:text-3xl font-bold text-[#00FFF5]"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 {modalContent[activeModal as keyof typeof modalContent].title}
