@@ -35,9 +35,9 @@ const HeroSection = () => {
                 scale: [1, 1.5, 1],
               }}
               transition={{
-                duration: 3 + Math.random() * 2,
+                duration: 2 + Math.random() * 1,
                 repeat: Infinity,
-                delay: Math.random() * 2,
+                delay: Math.random() * 1,
               }}
             />
           ))}
@@ -60,9 +60,9 @@ const HeroSection = () => {
                 scaleX: [0, 1, 0],
               }}
               transition={{
-                duration: 4,
+                duration: 3,
                 repeat: Infinity,
-                delay: Math.random() * 3,
+                delay: Math.random() * 2,
               }}
             />
           ))}
@@ -76,7 +76,7 @@ const HeroSection = () => {
           style={{ fontFamily: 'Poppins, sans-serif' }}
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
           Construim AI care muncește pentru tine
         </motion.h1>
@@ -86,7 +86,7 @@ const HeroSection = () => {
           style={{ fontFamily: 'Inter, sans-serif' }}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
           De la idee la implementare — prototipuri, modele custom, automatizări inteligente.
         </motion.p>
@@ -95,7 +95,7 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
         >
           <Button
             variant="primary"
